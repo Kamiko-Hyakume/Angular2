@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-data-binding',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.css'
 })
@@ -14,6 +15,7 @@ export class DataBinding {
   urlImagem = 'https://conexaoplaneta.com.br/wp-content/uploads/2023/07/comedy-pet-abre-conexao-planeta-1024x708.jpg';
 
   valorAtual: string = '';
+  valorSalvo: string = '';
 
   getValor() {
     return 1;
@@ -27,6 +29,9 @@ export class DataBinding {
 
   onKeyUp(evento: KeyboardEvent){
     this.valorAtual =  (<HTMLInputElement>evento.target).value;
+  }
+  salvarValor(valor: string){
+    this.valorSalvo = valor;
   }
 
 }
