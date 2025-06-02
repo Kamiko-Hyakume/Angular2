@@ -11,11 +11,13 @@ export class DataBinding {
 
   cursoAngular: boolean = true;
 
+  urlImagem = 'https://conexaoplaneta.com.br/wp-content/uploads/2023/07/comedy-pet-abre-conexao-planeta-1024x708.jpg';
+
   getValor() {
     return 1;
   }
   getCurtiCurso(){
     return true;
   }
-  
+
 }
