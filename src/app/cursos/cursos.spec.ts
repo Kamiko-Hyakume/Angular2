@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Cursos } from './cursos';
+import { Injectable } from '@angular/core';
+
+
 
 describe('Cursos', () => {
   let component: Cursos;

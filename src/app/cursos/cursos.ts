@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CursosService } from './cursos.service';
 
 @Component({
   selector: 'app-teste',
@@ -9,9 +10,16 @@ import { Component } from '@angular/core';
 })
 export class Cursos {
   nomeGithub: string = '';
-  cursos: string[] = ['Java', 'Angular', 'HTML'];
+  cursos: string[] = [] ;
 
-  constructor(){
+  constructor(private cursosService: CursosService){
     this.nomeGithub = 'https://github.com/Kamiko-Hyakume';
+    
+    // var servico = new CursosSpec();
+
+    this.cursos = this.cursosService.getCursos();
+
   }
+
+
 }
